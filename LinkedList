@@ -1,0 +1,25 @@
+1. Insert Node At The Beginning
+
+Node* insertAtFirst(Node* list, int newValue) {
+    // Write your code here
+    Node* head = new Node();
+    Node* temp = new Node();
+    temp = list;
+    head->data = newValue;
+    head->next = temp;
+    temp=head;
+    
+    return temp;
+    
+}
+
+2.Delete Node in a Linked List
+
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        node->val = node->next->val;
+        node->next = node->next->next;
+    }
+};
+
