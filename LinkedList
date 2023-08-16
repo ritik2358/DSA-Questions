@@ -23,3 +23,20 @@ public:
     }
 };
 
+3.Count nodes of linked list
+
+
+int length(Node *head)
+{
+    int c=1;
+    Node* temp = new Node();
+    temp = head;
+
+    while(temp->next != NULL){
+        c++;
+        temp=temp->next;
+    }
+
+    return c;
+}
+
