@@ -25,7 +25,6 @@ public:
 
 3.Count nodes of linked list
 
-
 int length(Node *head)
 {
     int c=1;
@@ -39,4 +38,21 @@ int length(Node *head)
 
     return c;
 }
+
+4. Search in a Linked List
+
+int searchInLinkedList(Node<int> *head, int k) {
+    // Write your code here.
+    int flag;
+    // Node<int> *temp = new Node<int>();
+    // temp = head;
+    while(head!= NULL){
+      if (head->data == k) {
+        return 1;
+      }
+      head = head->next;
+    }
+    return 0;
+}
+
 
