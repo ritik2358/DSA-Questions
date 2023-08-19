@@ -55,4 +55,55 @@ int searchInLinkedList(Node<int> *head, int k) {
     return 0;
 }
 
+5. Introduction To Doubly Linked List
+
+Node* constructLL(vector<int>& arr) {
+    // Write your code here
+    Node* head = new Node();
+    
+    head->data=arr[arr.size()-1];
+
+    for(int i = arr.size()-2; i>=0 ; i--){
+        Node* temp = new Node();
+        temp->data=arr[i];
+        temp->next=head;
+        head=temp;
+
+    }
+    return head;
+}
+
+6. Doubly linked list Insertion at given position
+
+void addNode(Node *head, int pos, int data)
+{
+   // Your code here
+    while ( pos-- ) {
+        head = head->next;
+    }
+    Node* node = new Node(data);
+    node->prev = head;
+    node->next = head->next;
+    head->next = node;
+   
+}
+
+7. Insert at end of Doubly Linked List
+
+Node * insertAtTail(Node *head, int k) {
+   Node* curr = new Node(k);
+    if(head == NULL)
+    return curr;
+    Node* temp = head;
+    
+    while(temp->next!=NULL){
+        temp = temp-> next;
+    }
+    temp->next= curr;
+    temp->prev = head;
+    curr->prev=temp;
+    curr->next=NULL;
+    return head;
+}
+
 
