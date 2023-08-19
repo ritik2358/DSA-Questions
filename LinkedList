@@ -143,3 +143,23 @@ Node* reverseDLL(Node* head)
     return prev;
 }
 
+10. Middle of the Linked List
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* temp = head;
+        int c=1;
+        while(temp->next!=NULL){
+            c++;
+            temp=temp->next;
+        }
+        int p=c/2;
+        while(p--){
+            head=head->next;
+        }
+        return head;
+    }
+};
+ 
+
