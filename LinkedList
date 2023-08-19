@@ -124,3 +124,22 @@ Node * deleteLastNode(Node *head) {
     
 }
 
+9. Reverse A Doubly Linked List
+
+Node* reverseDLL(Node* head)
+{   
+    // Write your code here  
+    Node* temp= head; 
+    Node* curr= new Node();
+    Node* prev= NULL;
+    while(temp){
+        // temp->next=NULL;
+        curr=temp->next;
+        temp->next=prev;
+        temp->prev = curr;
+       prev = temp;
+    temp = curr;
+    } 
+    return prev;
+}
+
