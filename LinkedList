@@ -106,4 +106,21 @@ Node * insertAtTail(Node *head, int k) {
     return head;
 }
 
+8. Delete Last Node of a Doubly Linked List
+
+Node * deleteLastNode(Node *head) {
+    if (head->next == NULL) {
+      return NULL;
+    } 
+      Node *temp = head;
+      while (temp->next != NULL) {
+        temp = temp->next;
+      }
+      Node *curr = temp->prev;
+      curr->next = NULL;
+    //   temp->prev = NULL;
+    
+    return head;
+    
+}
 
