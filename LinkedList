@@ -182,5 +182,26 @@ public:
     return prev;
     }
 };
+
+12. Linked List Cycle
+
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if(head==NULL)
+        return false;
+
+        ListNode *temp = head;
+        ListNode *curr = head;
+        while(temp!=NULL && temp->next!=NULL){
+            temp=temp->next->next;
+            curr=curr->next;
+
+            if(temp==curr)
+            return true;
+        }
+        return false;
+    }
+};
  
 
