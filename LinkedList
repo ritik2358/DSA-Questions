@@ -230,3 +230,26 @@ public:
         return 0;
     }
 };
+
+14. Find length of Loop
+
+int lengthOfLoop(Node *head) {
+    Node *temp=head;
+    Node *curr=head;
+    int c=1;
+
+    while(temp!=NULL && temp->next!=NULL){
+        temp=temp->next->next;
+        curr=curr->next;
+
+        if(temp==curr){
+            curr=curr->next;
+            while(curr!=temp){
+                c++;
+                curr=curr->next;
+            }
+             return c;
+        }
+    }
+    return 0;
+}
