@@ -8,9 +8,7 @@ Node* insertAtFirst(Node* list, int newValue) {
     head->data = newValue;
     head->next = temp;
     temp=head;
-    
     return temp;
-    
 }
 
 2.Delete Node in a Linked List
