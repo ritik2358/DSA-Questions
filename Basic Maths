@@ -1,1 +1,38 @@
+1. Check Armstrong
 
+bool checkArmstrong(int n){
+	//Write your code here
+	int s=0,c=0;
+        for (int j = n; j > 0; j/=10){
+			c++;
+		}
+        for(int i =n ; i>0 ; i=i/10){
+		int r = i%10;
+		s += pow(r,c);
+	}
+	if(s==n){
+		return true;
+	}
+	else
+	return false;
+}
+
+2. Palindrome Number
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+         if(x<0 || x!=0 && x%10 ==0 ) return false;
+        int y=0,r;
+        while(x>y)
+        {
+            r=x%10;
+            y=y*10+r;
+            x=x/10;
+        }
+        if(x==y || x==y/10)
+            return true;
+        else
+            return false;
+        }
+};
